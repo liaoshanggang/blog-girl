@@ -1,1 +1,25 @@
+/*
+ * @Description: 全局的css文件
+ * @Author: liaoshanggang
+ * @Date: 2019-08-18 18:12:56
+ * @Last Modified by: liaoshanggang
+ * @Last Modified time: 2019-08-19 00:56:31
+ */
+
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  font: 14px;
+  font-family: 'Courier New', Courier, monospace;
+}
+ul {
+  margin: 0;
+}
+li {
+  margin: 0;
+  list-style: none;
+}
+li:focus {
+  outline:none;
+}

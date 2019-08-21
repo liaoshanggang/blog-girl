@@ -1,6 +1,13 @@
+/*
+ * @Description: 进行测试的文件
+ * @Author: liaoshanggang
+ * @Date: 2019-08-18 18:14:03
+ * @Last Modified by:   liaoshanggang
+ * @Last Modified time: 2019-08-18 18:14:03
+ */
+
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
-
 module.exports = function (config) {
   config.set({
     basePath: '',

@@ -1,3 +1,10 @@
+/*
+ * @Description: 处理浏览器兼容
+ * @Author: liaoshanggang
+ * @Date: 2019-08-18 18:05:19
+ * @Last Modified by: liaoshanggang
+ * @Last Modified time: 2019-08-18 18:12:20
+ */
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
  * You can add your own extra polyfills to this file.
@@ -17,7 +24,7 @@
 /***************************************************************************************************
  * BROWSER POLYFILLS
  */
-
+//对付IE10等配置
 /** IE10 and IE11 requires the following for NgClass support on SVG elements */
 // import 'classlist.js';  // Run `npm install --save classlist.js`.
 
@@ -55,6 +62,7 @@
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
+//angular项目运行时需要的一些叶片文件
 import 'zone.js/dist/zone';  // Included with Angular CLI.
 
 
