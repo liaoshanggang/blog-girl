@@ -2,8 +2,8 @@
  * @Description: 进行测试的文件
  * @Author: liaoshanggang
  * @Date: 2019-08-18 18:14:03
- * @Last Modified by:   liaoshanggang
- * @Last Modified time: 2019-08-18 18:14:03
+ * @Last Modified by: liaoshanggang
+ * @Last Modified time: 2019-08-22 01:09:53
  */
 
 // Karma configuration file, see link for more information
@@ -23,7 +23,7 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, './coverage/blog-gril'),
+      dir: require('path').join(__dirname, './coverage/blog-girl'),
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
     },
