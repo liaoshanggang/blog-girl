@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { CreateTodoComponent } from './create-todo/create-todo.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { FormsModule} from '@angular/forms';
+import { DetailComponent } from './detail/detail.component';
 
 /**
  * 声明了AppComponent，TodoComponent个组件，
@@ -26,7 +27,8 @@ import { FormsModule} from '@angular/forms';
     TodoComponent,
     InlineComponent,
     CreateTodoComponent,
-    TodoListComponent
+    TodoListComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

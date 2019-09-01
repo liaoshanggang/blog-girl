@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from '../interface';
+import { Router, ActivatedRoute } from '@angular/router';
+interface PrivateTodo extends Todo{
+  selected?: boolean;//后台返回的是没有的，设置为可选的字段
+}
 
 @Component({
   selector: 'app-todo-list',
@@ -6,19 +11,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-list.component.scss']
 })
 export class TodoListComponent implements OnInit {
-  todos = [
+  todos:PrivateTodo[] = [
     {id:999,description:'For test purpose',category:1,content:'test'},
     {id:998,description:'For test purpose aaa',category:1,content:'test'},
+    {id:999,description:'For test purpose',category:1,content:'test'},
   ]
 
   selectAll = false;
 
-  constructor() { }
+  constructor(private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit() {
   }
 
-  delete(ids){
+  delete(ids: number[]){
+    //number组成的数组
     this.todos = this.todos.filter(item=>ids.indexOf(item.id) === -1);
   }
   toggleAll(){
@@ -35,5 +42,12 @@ export class TodoListComponent implements OnInit {
     const ids = this.todos.filter(item=>item.selected).map(item=>item.id);
     //复用
     this.delete(ids);
+  }
+
+  navigateTo(todo: PrivateTodo,event: MouseEvent){
+    if(event.target instanceof HTMLTableCellElement){
+      //把这个id传送过去，第二个参数我们会给路由额外的信息，让它根据这些信息进行导航，相对应的位置就是这个route
+      this.router.navigate([todo.id],{relativeTo:this.route});
+    }
   }
 }
