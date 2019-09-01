@@ -10,7 +10,7 @@ import { LayoutModule } from './layout/layout.module';
 import { AppRoutingModule } from './app.routing.module';
 import { CreateTodoComponent } from './create-todo/create-todo.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
-
+import { FormsModule} from '@angular/forms';
 
 /**
  * 声明了AppComponent，TodoComponent个组件，
@@ -31,7 +31,8 @@ import { TodoListComponent } from './todo-list/todo-list.component';
   imports: [
     BrowserModule,
     LayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
