@@ -1,8 +1,9 @@
+<button (click)="deleteSelected()">Delete selected</button>
 <table>
   <thead>
     <tr>
       <th>
-        <input type="checkbox">
+        <input type="checkbox" [(ngModel)]="selectAll" (ngModelChange)="toggleAll()">
       </th>
       <th>Description </th>
       <th>Category</th>
@@ -10,14 +11,14 @@
     </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let item of todos">
+  <tr *ngFor="let item of todos even as isEven" [ngClass]="{even: isEven}" (click)="navigateTo(item,$event)">
       <td>
-        <input type="checkbox">
+        <input type="checkbox" [(ngModel)]="item.selected" (ngModelChange)="check()">
       </td>
       <td>{{item.description}}</td>
       <td>{{item.category}}</td>
       <td>
-        <a>Delete</a>
+        <a (click)="delete([item.id])">Delete</a>
       </td>
     </tr>
   </tbody>
