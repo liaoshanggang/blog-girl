@@ -1,4 +1,5 @@
-<button (click)="deleteSelected()">Delete selected</button>
+<app-btn [text]="'Delete selected'" (click$)="deleteSelected($event)"></app-btn>
+<!--<button (click)="deleteSelected()">Delete selected</button>-->
 <table>
   <thead>
     <tr>
@@ -16,9 +17,9 @@
         <input type="checkbox" [(ngModel)]="item.selected" (ngModelChange)="check()">
       </td>
       <td>{{item.description}}</td>
-      <td>{{item.category}}</td>
+      <td>{{item.category | category}}</td>
       <td>
-        <a (click)="delete([item.id])">Delete</a>
+        <a (click)="delete.next([item.id])">Delete</a>
       </td>
     </tr>
   </tbody>
