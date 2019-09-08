@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-//import { AppRoutingModule } from './app-routing.module';
+// import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
 import { AboutModule } from './about/about.module';
@@ -12,6 +12,8 @@ import { CreateTodoComponent } from './create-todo/create-todo.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { FormsModule} from '@angular/forms';
 import { DetailComponent } from './detail/detail.component';
+import {TodoService} from './providers/todo.service';
+import {CategoryPipe} from './pipes/category.pipe';
 
 /**
  * 声明了AppComponent，TodoComponent个组件，
@@ -28,7 +30,8 @@ import { DetailComponent } from './detail/detail.component';
     InlineComponent,
     CreateTodoComponent,
     TodoListComponent,
-    DetailComponent
+    DetailComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,7 @@ import { DetailComponent } from './detail/detail.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
