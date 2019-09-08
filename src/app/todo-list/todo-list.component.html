@@ -1,4 +1,5 @@
-<button (click)="deleteSelected()">Delete selected</button>
+<app-btn [text]="'Delete selected'" (click$)="deleteSelected($event)"></app-btn>
+<!--<button (click)="deleteSelected()">Delete selected</button>-->
 <table>
   <thead>
     <tr>
