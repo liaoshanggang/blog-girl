@@ -31,4 +31,8 @@ export class TodoComponent implements OnInit {
     // this.todoList = this.todoList.filter(item => ids.indexOf(item.id) === -1);
     this.todoList2 = this.todoList2.filter(item => ids.indexOf(item.id) === -1);
   }
+
+  add(data: Partial<Todo>) {
+    this.todoList = this.todoService.addTodo(data);
+  }
 }

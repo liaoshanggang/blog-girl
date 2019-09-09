@@ -10,7 +10,7 @@ import { LayoutModule } from './layout/layout.module';
 import { AppRoutingModule } from './app.routing.module';
 import { CreateTodoComponent } from './create-todo/create-todo.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
-import { FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetailComponent } from './detail/detail.component';
 import {TodoService} from './providers/todo.service';
 import {CategoryPipe} from './pipes/category.pipe';
@@ -37,7 +37,8 @@ import {CategoryPipe} from './pipes/category.pipe';
     BrowserModule,
     LayoutModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [TodoService],
   bootstrap: [AppComponent]

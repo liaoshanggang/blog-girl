@@ -10,6 +10,9 @@ export class BtnComponent implements OnInit {
   @Input()
   text: string;
 
+  @Input()
+  disabled = false;
+
   @Output()
   click$: EventEmitter<any> = new EventEmitter();
   constructor() { }
