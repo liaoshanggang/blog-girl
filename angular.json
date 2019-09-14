@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "blog-girl": {
+    "the-edu": {
       "projectType": "application",
       "schematics": {"@schematics/angular:component": {"styleext": "scss"}},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/blog-girl",
+            "outputPath": "dist/the-edu",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "blog-girl:build"
+            "browserTarget": "the-edu:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "blog-girl:build:production"
+              "browserTarget": "the-edu:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "blog-girl:build"
+            "browserTarget": "the-edu:build"
           }
         },
         "test": {
@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "blog-girl:serve"
+            "devServerTarget": "the-edu:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "blog-girl:serve:production"
+              "devServerTarget": "the-edu:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "blog-girl"
+  "defaultProject": "the-edu"
 }
