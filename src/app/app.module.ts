@@ -1,19 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 // import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoComponent } from './todo/todo.component';
-import { AboutModule } from './about/about.module';
 import { InlineComponent } from './inline/inline.component';
 import { LayoutModule } from './layout/layout.module';
-import { AppRoutingModule } from './app.routing.module';
-import { CreateTodoComponent } from './create-todo/create-todo.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DetailComponent } from './detail/detail.component';
-import {TodoService} from './providers/todo.service';
-import {CategoryPipe} from './pipes/category.pipe';
+import {TodoService} from './todo/providers/todo.service';
+
+import { TodoModule } from './todo/todo.module';
+import { CoreModule } from './core/core.module';
+
+
 
 /**
  * 声明了AppComponent，TodoComponent个组件，
@@ -26,20 +22,16 @@ import {CategoryPipe} from './pipes/category.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    TodoComponent,
-    InlineComponent,
-    CreateTodoComponent,
-    TodoListComponent,
-    DetailComponent,
-    CategoryPipe
+    InlineComponent
   ],
   imports: [
-    BrowserModule,
     LayoutModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
+    CoreModule,
+    TodoModule,
   ],
+  /**
+   * 配置 ng-zorro-antd 国际化（文案 及 日期）
+   */
   providers: [TodoService],
   bootstrap: [AppComponent]
 })

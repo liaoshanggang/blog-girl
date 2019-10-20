@@ -5,12 +5,15 @@
  * @Last Modified by: liaoshanggang
  * @Last Modified time: 2019-08-19 00:56:31
  */
-
+@import "~ng-zorro-antd/style/index.min.css"; /* 引入基本样式 */
+@import "~ng-zorro-antd/button/style/index.min.css"; /* 引入组件样式 */
 /* You can add global styles to this file, and also import other style files */
 body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  font: 14px;
+  font-size: 14px;
   font-family: 'Courier New', Courier, monospace;
 }
 ul {

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavComponent } from './nav/nav.component';
 import { RouterModule } from '@angular/router';
 import { BtnComponent } from './btn/btn.component';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 
 // routerLink='todo' 也是RouterModule下的指令
@@ -10,7 +11,8 @@ import { BtnComponent } from './btn/btn.component';
   declarations: [NavComponent, BtnComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    NgZorroAntdModule
   ],
   exports: [
     NavComponent,

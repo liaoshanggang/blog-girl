@@ -1,13 +1,15 @@
 ul {
   width: 100%;
-  background: rgb(27, 111, 121,.3);
-  display: flex;
+  background: rgba(0, 21, 41, 0.3);
 }
 li {
-  padding: 10px 2em;
   cursor: pointer;
   color: gray;
 }
 .active {
- color: black;
+ color: rgb(248, 241, 241);
+}
+
+[nz-menu] {
+  line-height: 64px;
 }
